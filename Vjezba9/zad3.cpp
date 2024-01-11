@@ -7,7 +7,6 @@ void customSort(T arr[], int size) {
     std::sort(arr, arr + size);
 }
 
-// Specijalizacija za niz char-ova
 template <>
 void customSort<char>(char arr[], int size) {
     std::sort(arr, arr + size, [](char a, char b) {
@@ -16,11 +15,10 @@ void customSort<char>(char arr[], int size) {
 }
 
 int main() {
-    // Primjer korištenja generičke funkcije za sortiranje niza
     int intArray[] = { 5, 2, 8, 1, 3 };
     customSort(intArray, 5);
 
-    std::cout << "Sorted int array: ";
+    std::cout << "Sortirani niz integera: ";
     for (int i = 0; i < 5; ++i) {
         std::cout << intArray[i] << " ";
     }
@@ -29,7 +27,7 @@ int main() {
     char charArray[] = { 'c', 'A', 'b', 'D', 'a' };
     customSort(charArray, 5);
 
-    std::cout << "Sorted char array (case-insensitive): ";
+    std::cout << "Sortirani niz charova: ";
     for (int i = 0; i < 5; ++i) {
         std::cout << charArray[i] << " ";
     }
