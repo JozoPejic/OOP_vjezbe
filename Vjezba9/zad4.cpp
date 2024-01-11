@@ -7,7 +7,7 @@ private:
     T x, y;
 
 public:
-    point(T xCoord, T yCoord) : x(xCoord), y(yCoord) {}
+    point(T x, T y) : x(x), y(y) {}
 
     T operator-(const point& other) const {
         T deltaX = x - other.x;
